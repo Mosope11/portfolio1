@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="menu-backdrop"></div>
+
+  <nav>
+    <div class="navbar">
+      <a href="index.html" class="logo">TechOps</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="project.html">Projects</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  <div class="Projects">
+    <h1>My Projects</h1>
+    <div class="project-list">
+      <div class="project-item">
+        <h2>Project 1: Weather Website</h2>
+        <p>A weather website that shows current weather conditions and forecasts for various locations.</p>
+        <img src="Screenshot 2025-05-19 233329.png" alt="Weather website screenshot">
+      </div>
+      <div class="project-item">
+        <h2>Project 2: My Portfolio</h2>
+        <p>A personal portfolio website that showcases my skills, projects, and experience.</p>
+        <img src="image.png" alt="My portfolio screenshot">
+      </div>
+      <div class="project-item">
+        <h2>Project 3: Student Enrollment Table</h2>
+        <p>A student enrollment table that displays student information and allows for easy management of enrollments.</p>
+        <img src="Screenshot 2025-02-11 112536.png" alt="Student enrollment table screenshot">
+      </div>
+      <div class="project-item">
+        <h2>Project 4: Socially Website</h2>
+        <p>A social media platform that allows users to connect with friends and share updates.</p>
+        <img src="Screenshot 2025-02-11 112009.png" alt="My portfolio screenshot">
+      </div>
+      <div class="project-item">
+        <h2>Project 5: First Day in Class</h2>
+        <p>A simple web application that talks about my first day in class.</p>
+        <img src="Screenshot 2025-02-11 112807.png" alt="First day in class screenshot">
+      </div>
+    </div>  
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const menuBackdrop = document.querySelector('.menu-backdrop');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuBackdrop.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    menuBackdrop.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      menuBackdrop.classList.remove('active');
+      hamburger.classList.remove('active');
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuBackdrop.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
